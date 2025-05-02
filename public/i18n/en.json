@@ -1,0 +1,15 @@
+{
+    "app": {
+      "title": "Art Institute of Chicago Exhibitions"
+    },
+    "footer": {
+      "copyright": "Copyright © 2025 Art Institute of Chicago. All rights reserved.",
+      "developed-by": "Developed by 1ASI0729 – Fabrizzio Pereira"
+    },
+    "exhibitions": {
+      "title": "All Exhibitions Information",
+      "view-details": "View Details",
+      "status": "Status"
+    }
+  }
+  

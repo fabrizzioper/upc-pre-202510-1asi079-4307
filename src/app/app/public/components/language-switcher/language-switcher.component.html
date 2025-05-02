@@ -1,0 +1,5 @@
+<mat-button-toggle-group [value]="currentLang" aria-label="Language">
+    <mat-button-toggle *ngFor="let lang of langs" [value]="lang" (click)="use(lang)">
+        {{ lang.toUpperCase() }}
+    </mat-button-toggle>
+</mat-button-toggle-group>

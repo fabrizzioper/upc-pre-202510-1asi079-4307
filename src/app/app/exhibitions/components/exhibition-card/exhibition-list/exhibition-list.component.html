@@ -1,0 +1,9 @@
+<h2>{{ 'exhibitions.title' | translate }}</h2>
+
+
+<section class="grid">
+    @for (ex of exhibitions; track ex.id) {
+      <app-exhibition-card [exhibition]="ex"></app-exhibition-card>
+    }
+  </section>
+  

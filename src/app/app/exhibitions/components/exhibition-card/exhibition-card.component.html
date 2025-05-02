@@ -1,0 +1,35 @@
+<mat-card class="ex-card" appearance="outlined">
+    <mat-card-header>
+      <mat-card-title>{{ exhibition.title }}</mat-card-title>
+      <mat-card-subtitle>{{ exhibition.status }}</mat-card-subtitle>
+    </mat-card-header>
+  
+    <img
+      *ngIf="exhibition.imageUrl"
+      mat-card-image
+      [src]="exhibition.imageUrl"
+      [alt]="exhibition.title"
+    />
+  
+    <mat-card-content>
+      <p class="desc">{{ exhibition.shortDescription | slice:0:150 }}…</p>
+      <p *ngIf="exhibition.galleryTitle">
+        <strong>Gallery:</strong> {{ exhibition.galleryTitle }}
+      </p>
+    </mat-card-content>
+  
+    <mat-card-actions align="end">
+      <a
+        mat-button
+        color="primary"
+        [href]="exhibition.webUrl"
+        target="_blank"
+        rel="noopener"
+        >{{ 'exhibitions.view-details' | translate }}</a
+      >
+      <span class="spacer"></span>
+      <span>{{ exhibition.startAt | date : 'longDate' }} – {{ exhibition.endAt |
+        date : 'longDate' }}</span>
+    </mat-card-actions>
+  </mat-card>
+  
